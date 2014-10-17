@@ -1,0 +1,7 @@
+symfony_base_app:
+    resource: "@SymfonyBaseAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+symfony_base_admin:
+    resource: "@SymfonyBaseAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin

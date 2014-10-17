@@ -1,0 +1,10 @@
+composer.phar
+composer.lock
+Vagrantfile
+.vagrant
+modules
+manifests
+webroot/vendor
+webroot/app/cache
+webroot/app/logs
+webroot/bin

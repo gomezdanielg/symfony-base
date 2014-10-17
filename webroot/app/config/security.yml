@@ -1,0 +1,29 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+    providers:
+        admin_provider:
+            memory:
+                users:
+                    admin: { password: adminpass,  roles: ROLE_ADMIN }
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        admin_login:
+            pattern: ^/admin/login$
+            security: false
+        admin_secured_area:
+            pattern: ^/admin/
+            provider: admin_provider
+            form_login:
+                check_path: symfony_base_admin_security_check
+                login_path: symfony_base_admin_login
+            logout:
+                path: symfony_base_admin_logout
+                target: symfony_base_admin_login
+
+    access_control:
+        - { path: ^/admin/, roles: ROLE_ADMIN }

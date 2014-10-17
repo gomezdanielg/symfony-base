@@ -1,0 +1,13 @@
+symfony_base_admin_homepage:
+    path:     /
+    defaults: { _controller: SymfonyBaseAdminBundle:Default:index }
+    
+symfony_base_admin_login:
+    path:     /login
+    defaults: { _controller: SymfonyBaseAdminBundle:Default:login }
+    
+symfony_base_admin_logout:
+    path:     /logout
+    
+symfony_base_admin_security_check:
+    path:     /security_check
